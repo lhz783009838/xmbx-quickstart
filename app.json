@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#2991f0",
+    "navigationBarTitleText": "机智如我，智障如你",
+    "navigationBarTextStyle":"black"
+  }
+}
