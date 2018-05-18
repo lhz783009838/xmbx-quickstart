@@ -1,5 +1,5 @@
 <!--index.wxml-->
- <view class="container">
+<!-- <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
@@ -7,12 +7,16 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
+  <button type='primary' size='default' bindtap='toTestView'>测试API</button>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
-</view> 
-<!-- <view class='container'>
-  <view>
-  
+</view>  -->
+
+<view class='page'>
+      主页
+  <view class="page__bd page__bd_spacing">
+    <button class="weui-btn" type="primary" bindtap='toWeUIPage'>WeUI 样式展示</button>
   </view>
-</view> -->
+
+</view>

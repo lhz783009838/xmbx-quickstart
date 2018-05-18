@@ -1,0 +1,7 @@
+<!--pages/test/test.wxml-->
+<view>
+  <button type='primary' bindtap='apiToSuccess'>测试访问成功</button>
+  <button type='primary' bindtap='apiToFail'>测试后台500</button>
+  <button type='primary' bindtap='apiToValidToken'>校验用户session是否过期</button>
+  <button type='primary' bindtap=''>登录</button>
+</view>
