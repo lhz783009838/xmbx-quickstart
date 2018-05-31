@@ -5,15 +5,17 @@
  * @param method 请求方法 [GET POST PUT DELETE OPTION]
  */
 module.exports = function (api, path, params, method) {
-  let token = wx.getStorageSync('token') || '';
+  let cookie = wx.getStorageSync('Cookie') || '';
+  console.log(cookie);
   return new Promise((resolve, reject) => {
     wx.request({
       url: `${api}/${path}`,
       data: Object.assign({}, params),
       method: method,
-      header: { 'Content-Type': 'application/json', 'token': token },
+      header: { 'Content-Type': 'application/json', 'Cookie': cookie },
       success: res => {
-        if (res.data && res.data.code == '7304') {
+        if (res.data && res.data.code == '2000') {
+          wx.setStorageSync('Cookie', '');
           wx.redirectTo({
             url: '../../pages/login/login',
           })

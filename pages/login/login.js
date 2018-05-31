@@ -22,16 +22,17 @@ Page({
     app.wxchat.login()
       .then(res => {
         if (res.code) {
+          console.log(res.code);
           app.authApi
             .authorize(res.code)
             .then(res => {
               // 登录成功处理
-              if (res.code == '0000') {
+              if (res.success == true) {
                 this.setData({
                   hiddenLoading: !this.data.hiddenLoading
                 })
-                console.log(res);
-                wx.setStorageSync('token', res.token);
+                // console.log(res);
+                wx.setStorageSync('Cookie', 'sid=' + res.jsessionid);
                 wx.redirectTo({
                   url: '../../pages/index/index',
                 })

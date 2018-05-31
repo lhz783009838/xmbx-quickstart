@@ -1,4 +1,5 @@
 <!--pages/login/login.wxml-->
 <view>
+  <button ></button>
   <loading hidden="{{hiddenLoading}}">努力加载中...</loading>
 </view>

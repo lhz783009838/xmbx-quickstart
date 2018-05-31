@@ -17,6 +17,7 @@
       主页
   <view class="page__bd page__bd_spacing">
     <button class="weui-btn" type="primary" bindtap='toWeUIPage'>WeUI 样式展示</button>
+    <button class='weui-btn' type="primary" bindtap='testSession'>测试session</button>
   </view>
 
 </view>

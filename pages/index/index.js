@@ -19,9 +19,12 @@ Page({
       url: '../weui/index'
     })
   },
-  toTestView: function () {
-    wx.navigateTo({
-      url: '../test/test',
+  testSession: function () {
+    app
+    .clueApi
+    .get_clue(319)
+    .then(res => {
+      console.log(res);
     })
   },
   onLoad: function () {

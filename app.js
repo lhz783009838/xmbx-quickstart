@@ -2,11 +2,13 @@
 const common = require('./utils/common.js')
 const wxchat = require('./utils/wxchat.js')
 const authApi = require('./utils/authApi.js')
+const clueApi = require('./utils/clueApi.js')
 App({
   // 引入全局常量
   common: common,
   wxchat: wxchat,
   authApi: authApi,
+  clueApi: clueApi,
 
   onLaunch: function () {
     // 展示本地存储能力
